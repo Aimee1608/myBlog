@@ -17,7 +17,13 @@ Page({
     interval: 5000,
     duration: 1000,
     indicatorColor:'rgba(0,0,0,0.3)',
-    indicatorActiveColor:'#000'
+    indicatorActiveColor:'#000',
+    inputValue:''
+  },
+  bindKeyInput: function(){
+    this.setData({
+      inputValue: e.detail.value
+    })
   },
    changeIndicatorDots: function(e) {
     this.setData({
@@ -27,12 +33,6 @@ Page({
   changeAutoplay: function(e) {
     this.setData({
       autoplay: !this.data.autoplay
-    })
-  },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
     })
   },
   onLoad: function () {
@@ -64,7 +64,7 @@ Page({
             animationData:animation.export()
           })
         }.bind(this), 500)
-    }.bind(this),3000)
+    }.bind(this),1000)
    
   }
 });

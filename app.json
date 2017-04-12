@@ -1,13 +1,35 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/musicpage/music",
+    "pages/picturepage/picture",
+    "pages/userpage/user"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "BIZ",
     "navigationBarTextStyle":"black"
+  },
+   "tabBar": {
+     "color":"#333",
+     "selectedColor":"#000",
+     "borderStyle": "black",
+     "backgroundColor": "rgba(0,0,0,0.3)",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "推荐"
+    }, {
+      "pagePath": "pages/musicpage/music",
+      "text": "音乐"
+    },{
+      "pagePath": "pages/picturepage/picture",
+      "text": "相册"
+    },{
+      "pagePath": "pages/userpage/user",
+      "text": "我的"
+    }]
   },
   "debug": true
 }
