@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="container" animation="{{animationData}}">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>
+<view class="page01">
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}" class="bg-img">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" mode="scaleToFill"/>
+    </swiper-item>
+  </block>
+</swiper>
+<button bindtap="changeIndicatorDots"></button>
+<button bindtap="changeAutoplay"></button>
+  <view class="menu-list">
+    <view class="list active">首页</view>
+    <view class="list">实验室</view>
+    <view class="list">收藏室</view>
+    <view class="list">音乐室</view>
+    <view class="list">图片墙</view>
+    <view class="list">留言墙</view>
+  </view>
+</view>
+
+
