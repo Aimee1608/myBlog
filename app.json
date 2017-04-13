@@ -19,16 +19,16 @@
      "backgroundColor": "rgba(0,0,0,0.3)",
     "list": [{
       "pagePath": "pages/index/index",
-      "text": "推荐"
+      "text": "发现"
     }, {
       "pagePath": "pages/musicpage/music",
-      "text": "音乐"
+      "text": "我的音乐"
     },{
       "pagePath": "pages/picturepage/picture",
-      "text": "相册"
+      "text": "我的相册"
     },{
       "pagePath": "pages/userpage/user",
-      "text": "我的"
+      "text": "个人中心"
     }]
   },
   "debug": true

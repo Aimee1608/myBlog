@@ -9,9 +9,18 @@
   </view>
 </view>
 <view class="page01">
-<view class="search-section">
-    <input type="text"  bindinput="bindKeyInput" placeholder="搜索音乐、图片" confirm-type="search"/>
+  <view class="header">
+    <view class="search-section">
+      <input class="search-input" type="text"  bindinput="bindKeyInput" placeholder="搜索音乐、图片" confirm-type="search"/>
+    </view>
+    <view class="menu-list">
+      <navigator url="/pages/musicpage/music"  class="list list-chosed"><view > 音乐</view></navigator>
+      <navigator url="../otherpage/index" class="list"><view>图片墙</view></navigator>
+      <navigator url="../otherpage/index" class="list"><view>留言墙</view></navigator>
+      <navigator url="../otherpage/index" class="list"><view>逛逛</view></navigator>
+    </view>
   </view>
+  
   <swiper indicator-dots="{{indicatorDots}}"
     autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}" circular="true"  class="bg-img">
     <block wx:for="{{imgUrls}}">
@@ -22,14 +31,20 @@
   </swiper>
   <button bindtap="changeIndicatorDots"></button>
   <button bindtap="changeAutoplay"></button>
-  <view class="menu-list">
-    <navigator url="/pages/musicpage/music"  class="list">音乐</navigator>
-    <navigator url="../otherpage/index" class="list">图片墙</navigator>
-    <navigator url="../otherpage/index" class="list">留言墙</navigator>
-    <navigator url="../otherpage/index" class="list">逛逛</navigator>
-  </view>
+ 
   <view class="page01-more">
-    <view class="page01-title01">-精彩在线-</view>
+    <view class="page01-title01">-最新精彩-</view>
+    <view class="page01-list">
+      <view class="user-pic"></view>
+      <view class="list-text">
+         <view class="user-name">用户昵称</view>
+         <view class="list-title">分享文字内容</view>
+         <view class="list-pic">
+            <image src="../img/1.jpg" mode="aspectFill"></image>
+             <image src="../img/2.jpg" mode="aspectFill"></image>
+         </view>
+      </view>
+    </view>
   </view>
 </view>
 
