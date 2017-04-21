@@ -14,10 +14,10 @@
       <input class="search-input" type="text"  bindinput="bindKeyInput" placeholder="搜索音乐、图片" confirm-type="search"/>
     </view>
     <view class="menu-list">
-      <navigator url="/pages/musicpage/music"  class="list list-chosed"><view > 音乐</view></navigator>
-      <navigator url="../otherpage/index" class="list"><view>图片墙</view></navigator>
-      <navigator url="../otherpage/index" class="list"><view>留言墙</view></navigator>
-      <navigator url="../otherpage/index" class="list"><view>逛逛</view></navigator>
+      <navigator  class="list list-chosed"><view > 音乐</view></navigator>
+      <navigator  class="list"><view>图片墙</view></navigator>
+      <navigator  class="list"><view>留言墙</view></navigator>
+      <navigator  class="list"><view>逛逛</view></navigator>
     </view>
   </view>
   
@@ -29,22 +29,36 @@
       </swiper-item>
     </block>
   </swiper>
-  <button bindtap="changeIndicatorDots"></button>
-  <button bindtap="changeAutoplay"></button>
- 
-  <view class="page01-more">
-    <view class="page01-title01">-最新精彩-</view>
-    <view class="page01-list">
-      <view class="user-pic"></view>
-      <view class="list-text">
-         <view class="user-name">用户昵称</view>
-         <view class="list-title">分享文字内容</view>
-         <view class="list-pic">
-            <image src="../img/1.jpg" mode="aspectFill"></image>
-             <image src="../img/2.jpg" mode="aspectFill"></image>
-         </view>
+  <view class="muisc-tab">
+    <button bindtap="changeIndicatorDots"></button>
+    <button bindtap="changeAutoplay"></button>
+    <view class="page01-more">
+      <view class="page01-title01">
+        <view>-</view> 
+          最新精彩 
+        <view>-</view>
+      </view>
+      <view class="page01-list">
+        <view class="user-pic"></view>
+        <view class="list-text">
+          <view class="user-name">用户昵称</view>
+          <view class="list-title">分享文字内容hahahehehehehehhdhdhfkldfjkdfjkhsdhfhudsfndfjfdjifdnfdkjjfdjkfjkfjkfdkjfkjfdj</view>
+          <view class="list-pic">
+                <image src="../img/1.jpg" mode="aspectFill"></image>
+                <image src="../img/2.jpg" mode="aspectFill"></image>
+                <image src="../img/2.jpg" mode="aspectFill"></image>
+                <image src="../img/2.jpg" mode="aspectFill"></image>
+          </view>
+        </view>
       </view>
     </view>
+  </view>
+  <view class="picture-tab">
+    照片照片照片
+  </view>
+  <view class="msg-tab">留言留言</view>
+  <view class="other-tab">
+    逛逛管逛逛
   </view>
 </view>
 
