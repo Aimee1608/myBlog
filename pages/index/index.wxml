@@ -14,10 +14,10 @@
       <input class="search-input" type="text"  bindinput="bindKeyInput" placeholder="搜索音乐、图片" confirm-type="search"/>
     </view>
     <view class="menu-list">
-      <navigator  class="list list-chosed"><view > 音乐</view></navigator>
-      <navigator  class="list"><view>图片墙</view></navigator>
-      <navigator  class="list"><view>留言墙</view></navigator>
-      <navigator  class="list"><view>逛逛</view></navigator>
+      <view  class="list list-chosed" bindtap="changeTab" data-tap="musicTab"><view > 音乐</view></view>
+      <view  class="list" bindtap="changeTab" data-tap="pictureTab"><view>图片墙</view></view>
+      <view  class="list" bindtap="changeTab" data-tap="msgTab"><view>留言墙</view></view>
+      <view  class="list" bindtap="changeTab" data-tap="otherTab"><view>逛逛</view></view>
     </view>
   </view>
   
@@ -29,7 +29,7 @@
       </swiper-item>
     </block>
   </swiper>
-  <view class="muisc-tab">
+  <view hidden="{{musicTab ? false : true}}" class="muisc-tab">
     <button bindtap="changeIndicatorDots"></button>
     <button bindtap="changeAutoplay"></button>
     <view class="page01-more">
@@ -53,11 +53,11 @@
       </view>
     </view>
   </view>
-  <view class="picture-tab">
+  <view hidden="{{pictureTab ? false : true}}" class="picture-tab">
     照片照片照片
   </view>
-  <view class="msg-tab">留言留言</view>
-  <view class="other-tab">
+  <view hidden="{{msgTab ? false: true}}" class="msg-tab">留言留言</view>
+  <view hidden="{{otherTab ? false : true}}" class="other-tab">
     逛逛管逛逛
   </view>
 </view>

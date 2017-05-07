@@ -165,7 +165,7 @@
 }
 
 .picture-tab,.msg-tab,.other-tab{
-  display:none;
+  display:block;
   width:100%;
 }
 

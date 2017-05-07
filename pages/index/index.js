@@ -18,7 +18,11 @@ Page({
     duration: 1000,
     indicatorColor:'rgba(0,0,0,0.3)',
     indicatorActiveColor:'#000',
-    inputValue:''
+    inputValue:'',
+    musicTab:true,
+    pictureTab:false,
+    mgsTab:false,
+    otherTab:false
   },
   bindKeyInput: function(){
     this.setData({
@@ -65,5 +69,32 @@ Page({
           })
         }.bind(this), 500)
     }.bind(this),1000)
+  },
+  changeTab:function(event){
+    console.log(event);
+    var tap =  event.target.dataset.tap;
+    if(tap=="musicTab"){
+      console.log(true);
+      musicTab = true;
+      pictureTab=false;
+      mgsTab=false;
+      otherTab=false
+    }else if(tap=="pictureTab"){
+      pictureTab = true;
+        musicTab=false;
+      mgsTab=false;
+      otherTab=false
+    }else if(tap=="msgTab"){
+      msgTab = true;
+        pictureTab=false;
+      musicTab=false;
+      otherTab=false
+    }else if(tap=="otherTab"){
+      otherTab=true;
+        pictureTab=false;
+      mgsTab=false;
+      musicTab=false
+    }
+  
   }
 });
